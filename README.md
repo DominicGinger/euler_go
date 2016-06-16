@@ -1,2 +1,6 @@
 # Project Euler Solutions in Go
-I started doing some project euler problems to learn a bit more about golang
+Just a couple of project euler solutions written in go.   
+[https://projecteuler.net](https://projecteuler.net)  
+[https://golang.org](https://golang.org)
+
+
