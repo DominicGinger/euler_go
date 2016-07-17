@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
-
 func isPrime(input int) bool {
 	if input == 2 {
 		return true
@@ -13,15 +8,11 @@ func isPrime(input int) bool {
 		return false
 	}
 
-	compare := 3
-	upto := 2
-	for ; compare < input/upto; compare++ {
-		if input%compare == 0 && input != compare {
+	for i := 3; i*i <= input; i += 2 {
+		if input%i == 0 {
 			return false
 		}
-		upto++
 	}
-
 	return true
 }
 
@@ -35,12 +26,8 @@ func countPrime(input int) int {
 			return i
 		}
 	}
-	return 0
 }
 
-func main() {
-	start := time.Now()
-	answer := countPrime(10001)
-	elapsed := time.Since(start)
-	fmt.Printf("%d %s\n", answer, elapsed)
+func p007() int {
+	return countPrime(10001)
 }

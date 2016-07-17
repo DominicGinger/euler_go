@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 func fibon(s1, s2, limit int) []int {
 	arr := make([]int, 2)
 	arr[0] = s1
@@ -16,7 +12,7 @@ func fibon(s1, s2, limit int) []int {
 	return arr
 }
 
-func sum_even(arr []int) int {
+func sumEven(arr []int) int {
 	total := 0
 	for _, element := range arr {
 		if element%2 == 0 {
@@ -26,8 +22,8 @@ func sum_even(arr []int) int {
 	return total
 }
 
-func main() {
+func p002() int {
 	arr := fibon(1, 2, 4000000)
-	total := sum_even(arr)
-	fmt.Println(total)
+	total := sumEven(arr)
+	return total
 }

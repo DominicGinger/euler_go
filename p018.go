@@ -1,15 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
-
-const input = `3
-7 4
-2 4 6
-8 5 9 3`
 
 const big_input = `75
 95 64
@@ -55,8 +49,8 @@ func next_line(lines []string, line int, base int) {
 	}
 }
 
-func main() {
+func p018() int {
 	lines := strings.Split(big_input, "\n")
 	next_line(lines, 0, 0)
-	fmt.Println(total)
+	return total
 }

@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 const hundred = 7
 const one_thousand = 11
 const and = 3
@@ -38,10 +34,10 @@ func letters_in(i int) int {
 	return sum
 }
 
-func main() {
+func p017() int {
 	total := 0
 	for i := 1; i <= 1000; i++ {
 		total += letters_in(i)
 	}
-	fmt.Println(total)
+	return total
 }

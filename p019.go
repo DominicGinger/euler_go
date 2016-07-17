@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 var months = []int{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
 
 func sunday(i int) bool {
@@ -13,7 +9,7 @@ func sunday(i int) bool {
 	return false
 }
 
-func main() {
+func p019() int {
 	total_days := 0
 	total_sundays := 0
 	for i := 0; i < 101; i++ {
@@ -29,5 +25,5 @@ func main() {
 			}
 		}
 	}
-	fmt.Println(total_sundays)
+	return total_sundays
 }

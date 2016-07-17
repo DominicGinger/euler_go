@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 func divisors_sum(input int) int {
 	total := 0
 	for i := 1; i <= input/2; i++ {
@@ -14,7 +10,7 @@ func divisors_sum(input int) int {
 	return total
 }
 
-func main() {
+func p021() int {
 	var m map[int]int
 	m = make(map[int]int)
 	for i := 0; i < 10000; i++ {
@@ -27,6 +23,5 @@ func main() {
 			sum += k
 		}
 	}
-
-	fmt.Println(sum)
+	return sum
 }
