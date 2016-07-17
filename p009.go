@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 func sq(a int) int {
 	return a * a
 }
@@ -24,6 +20,6 @@ func productHighestPythag(input int) int {
 	return 0
 }
 
-func main() {
-	fmt.Println(productHighestPythag(1000))
+func p009() int {
+	return productHighestPythag(1000)
 }

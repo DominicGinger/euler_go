@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 func even(input int) int {
 	return input / 2
 }
@@ -39,6 +35,6 @@ func longest_chain(limit int) int {
 	return output
 }
 
-func main() {
-	fmt.Println(longest_chain(1000000))
+func p014() int {
+	return longest_chain(1000000)
 }

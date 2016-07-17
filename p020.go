@@ -1,13 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"math/big"
 	"strconv"
 	"strings"
 )
 
-func factorial(num int) *big.Int {
+func bigFactorial(num int) *big.Int {
 	f := big.NewInt(1)
 	for i := 1; i <= num; i++ {
 		f.Mul(f, big.NewInt(int64(i)))
@@ -26,8 +25,8 @@ func sum_digits(num *big.Int) int {
 	return sum
 }
 
-func main() {
+func p020() int {
 	input := 100
-	fact := factorial(input)
-	fmt.Println(sum_digits(fact))
+	fact := bigFactorial(input)
+	return sum_digits(fact)
 }

@@ -1,11 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"io/ioutil"
 	"sort"
 	"strings"
-	"time"
 )
 
 func alphabeticalize(names_arr []string) []string {
@@ -21,8 +19,7 @@ func count(name string, idx int) int {
 	return sum * idx
 }
 
-func main() {
-	now := time.Now()
+func p022() int {
 	file, _ := ioutil.ReadFile("p022_names.txt")
 	names := strings.Trim(string(file), "\"")
 	names_arr := strings.Split(names, "\",\"")
@@ -30,6 +27,5 @@ func main() {
 	for i, v := range alphabeticalize(names_arr) {
 		total += count(v, i+1)
 	}
-	elapsed := time.Since(now)
-	fmt.Println(total, elapsed)
+	return total
 }

@@ -1,13 +1,11 @@
 package main
 
 import (
-	"fmt"
 	"math"
 	"strconv"
-	"time"
 )
 
-func sumPower(input float64) int64 {
+func sumPower(input float64) int {
 	number := math.Pow(2, input)
 	str := strconv.FormatFloat(number, 'e', int(input), 64)
 	str = str[:(len(str) - 4)]
@@ -20,12 +18,9 @@ func sumPower(input float64) int64 {
 			sum += next
 		}
 	}
-	return sum
+	return int(sum)
 }
 
-func main() {
-	start := time.Now()
-	sum := sumPower(1000)
-	elapsed := time.Since(start)
-	fmt.Printf("answer: %d, elapsed: %s\n", sum, elapsed)
+func p016() int {
+	return sumPower(1000)
 }

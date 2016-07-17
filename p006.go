@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 func sumOfSquares(number int) int {
 	total := 0
 	for ; number > 0; number-- {
@@ -20,8 +16,8 @@ func squareOfSums(number int) int {
 	return sum * sum
 }
 
-func main() {
+func p006() int {
 	su := sumOfSquares(100)
 	sq := squareOfSums(100)
-	fmt.Println(sq - su)
+	return sq - su
 }

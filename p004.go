@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-)
+import "strconv"
 
 func reverse(str string) string {
 	length := len(str)
@@ -40,7 +37,7 @@ func biggestPalindroneFactor(start, end int) int {
 	return biggest
 }
 
-func main() {
+func p004() int {
 	biggest := biggestPalindroneFactor(100, 999)
-	fmt.Println(biggest)
+	return biggest
 }

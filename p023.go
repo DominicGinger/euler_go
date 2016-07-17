@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
-
 const size int = 28123
 
 func isAbundant(number int) bool {
@@ -78,13 +73,8 @@ func getTotalWithoutSums(sums []int) int {
 	return total - sums_total
 }
 
-func main() {
-	start := time.Now()
+func p023() int {
 	abundant_numbers := getAbundantNumbers()
-	e1 := time.Since(start)
 	abundant_sums := getAbundantSums(abundant_numbers)
-	e2 := time.Since(start)
-	total := getTotalWithoutSums(abundant_sums)
-	e3 := time.Since(start)
-	fmt.Println(total, e1, e2, e3)
+	return getTotalWithoutSums(abundant_sums)
 }
