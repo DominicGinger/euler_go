@@ -12,7 +12,7 @@ var funcs = [...]func() int{
 	p006, p007, p008, p009, p010,
 	p011, p012, p013, p014, p015,
 	p016, p017, p018, p019, p020,
-	p021, p022, p023, p024,
+	p021, p022, p023, p024, p025,
 }
 
 func pad(idx int) string {
@@ -30,7 +30,7 @@ func run(idx int) {
 }
 
 func runAll() {
-	for i := 1; i < len(funcs); i++ {
+	for i := 0; i < len(funcs); i++ {
 		run(i)
 	}
 }
